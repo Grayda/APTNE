@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APTNE - AusPost Tracking Number Extractor</title>
+</head>
+
+<body>
+
+    <div>
+        <label for="detect">
+            Scan Barcode
+        </label>
+        <input type="button" id="detect" onclick="detect()">
+    </div>
+    <input type="button" />
+
+    <script type="javascript">
+
+        // check compatibility
+        if (!("BarcodeDetector" in globalThis)) {
+            console.log("Barcode Detector is not supported by this browser.");
+        } else {
+            console.log("Barcode Detector supported!");
+
+            // create new detector
+            const barcodeDetector = new BarcodeDetector({
+                formats: ["qr_code"],
+            });
+        }
+
+        function detect() {
+
+        }
+    </script>
+</body>
+
+</html>
